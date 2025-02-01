@@ -6,19 +6,16 @@
 A commonly and extensively used arduino circuit board can be seen in the below picture. The board has a processer or SoC i.e. System on a Chip. This is a central part of the chip and is encircled as can be seen below: 
 
 {IMAGE CREDITS - VSDIAT ; shared as part of lecture}
-
 ![Arduino Board](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/ee3cc1ca-c4b2-4879-9310-e6b18eb70959)
 
 The encircled region, however is only a high level view, which can be represented through a block diagram, as shown below:
 
 {IMAGE CREDITS - VSDIAT ; shared as part of lecture and subsequently hand drawn by author}
-
 ![Block Diagram](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/df9eced4-0311-45ce-b6a4-ccbd5e04bb25)
 
 In the picture, we are able to see a large box which represents, as written a SoC. In layman's terms, this often called a "CHIP". However, in technicality it is termed as a "PACKAGE". One kind of package, which is used in the arduino board is a QFN - 48 package (Quad Flat No-Leads). A package can be schematically represented as below:
 
 {IMAGE CREDITS - VSDIAT ; shared as part of lecture and subsequently hand drawn by author}
-
 ![Chip and Package](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/230f9986-466d-4423-8526-131efee694a0)
 
 As seen, a chip is actually inside a package, and is connected to various "PINS" or inputs/outputs. The locations of the pins and what they are are usually driven by the design of the PCB. A chip is also a very complex system, and has various components such as -: 
@@ -35,18 +32,15 @@ The core also has various components, which can mainly be segregated into -:
 Two schematics encompassing all of the above components can be seen below:
 
 {IMAGE CREDITS - VSDIAT ; shared as part of lecture and subsequently hand drawn by author}
-
 ![schematic 1 - pad, core , die](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/9568c3b3-1086-4146-b43a-9768632db86c)
 
 {IMAGE CREDITS - VSDIAT ; shared as part of lecture and subsequently hand drawn by author}
-
 ![schematic 2 - macro, foundry ip](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/bb43afab-53f8-4697-96ce-a711ced50c59)
 
 ### Introduction to RISC V
 RISC-V Instruction Set Architechture, commonly called RISC V ISA, is the language of the computer. When a C program is to be run on a piece of hardware, it is first compiled in an assembly language program like RISC V. It is then converted to machine language i.e. binary and subsequently implemented in the form of a hardware description language such as picorv32 cpu core. A schematic is shown below, representing the same: 
 
 {IMAGE CREDITS - VSDIAT ; shared as part of lecture}
-
 ![C program to running on hardware](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/0c10080e-99ac-42f6-8ea9-9f5b5a139c7b)
 
 
@@ -58,7 +52,6 @@ Application Software, or apps. They run on hardware such as laptops, mobile phon
 * Assemblers - Assemblers convert the instructions from the compilers into binary, and the function is implemented.
 
 {IMAGE CREDITS - VSDIAT ; shared as part of lecture}
-
 ![code to hardware](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/5e3fb422-7ca4-4657-b805-0d314d0deec7)
 
 
@@ -77,11 +70,9 @@ However, until June of 2020, there was no OPENSOURCE available PDK data, making 
 130 nm chips are also not slow, as verified by intel and OSU-:
 
 {IMAGE CREDITS - VSDIAT ; shared as part of lecture}
-
 ![130nmslow](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/ed434895-429d-4b8c-8cb9-5175c4f96165)
 
 {IMAGE CREDITS - VSDIAT ; shared as part of lecture}
-
 ![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/5982d929-56f7-4bf3-b628-2902668be1db) 
 ### Simplified RTL to GDS flow
 The RTL to GDSII  ( Register Transfer Level to Graphic Design System II) design process takes many steps, that are -:
@@ -184,50 +175,28 @@ Exploring OpenSource directory through Linux terminal steps:-
 
 2) Type _cd Desktop_ and then _cd work/tools_ to change directory to Desktop/work/tools, as this is where all openlane files are stored.
 
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/1a317af8-a4eb-41fe-b308-45307fb47a49)
-
 
 3) After changing directory, type _ls -ltr_ to list the contents of the directory.
 
 > Side note: **ltr** represents how the list of contents should be ordered . To find other ways, type _ls --help_.
 
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/6a6f1f08-cb16-4e44-937a-9a0a0eaf288a)
 
 4) In this workshop, we are going to use **openlane_working_dir**, and hence we will change directory to it by typing _cd openlane_working_dir_. Afterwards, we list the contents using the same _ls -ltr_. In this workshop, we are going to use **pdks** and **openlane** directories and hence we will explore both in sequence.
 
 5) Starting with **pdks**, type _cd pdks_ and then _ls -ltr_ to view the contents in **pdks**. Here, we will explore **sky130A**, so similarly change directory and then view contents. One will observe two directories - _libs.tech_ and _libs.rif_
 
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/3679332d-0999-406a-a40c-97e1829053dd)
 
 6) _libs.tech_ contains all tool specific files. As seen in the picture - tools like Qflow, netgen, magic etc have directories. Opening the **magic** directory in **libs.tech**, we can see the following files:
-
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/b41bee95-a59e-4cc8-8094-85c53c2ce138)
 
 7) _libs.ref_ contains all the technology/foundry related processes. Upon further exploration of **sky130_fd_sc_hd**, we see the following
 
 > **_cd .._** reverses the directory one step behind to the parent directory.cd 
 
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/963b1a8e-6b7d-4078-845a-f61abe497e5e)
-
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/f01b000a-5b3e-49d3-a6f2-28e116f8fa02)
-
 8) Next, we will open **openlane**
-
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/75bc59d6-41af-4854-8fd1-9bd58dd8616d)c
 
 ### Design Preparation Step
 
 To open Openlane, we can use the _docker_ command using **interactive**. After invoking the docker command, the prompt changes to **bash-4.2$**, and then one must type _ls -lrth_, and subsequently _./flow.tcl -interactive_ _package require openlane 0.9_ retrives all the required information for openlane.
-
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/13868bec-d11f-4b63-aae4-1fd3191adfbb)
 
 OpenLane has various designs and we are most interested in **picorv32a** Inside the _designs_ folder there is document named _config.tcl_ which overrides the default settings. These configurations are design specific.(e.g. clock period, clock port, verilog files).
 
@@ -237,19 +206,10 @@ OpenLane has various designs and we are most interested in **picorv32a** Inside 
 To setup the design of OpenLANE, we first need to prepare the design ensures that the final product functions correctly and reliably through _prep -design picorv32a_, which gives the following result.
 
 {IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/6fe84e83-52d9-43fa-a135-2fa39e90ffef)
+!image![OpenLANE](https://github.com/user-attachments/assets/52cda98d-b14a-4e61-916b-9b5441deffd7)
+)
 
 The command when run, sets up a filesystem where the OpenLANE can store the results. This creates a folder inside the **picorv32a** directory which contains the command log files, results, and the reports dumped of the various tool. The folder will be only have the lef files generated by this design setup stage. The cell LEF files *.lef* and technology LEF files *.tlef* merge to generate merged.lef inside **runs/tmp/**, wherein a a folder with today's date will be created, inside which a **tmp** folder will have contents, and the _merged.lef_ folder will contain the merged _lef_ files.
-
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/f273ec37-1225-41ee-b3af-bacdb26df037)
-
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/e7e38963-ce9b-403c-a483-0a43f94c7276)
-
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/6ab6ea83-5f09-4601-b1ee-38fdf4c1cec8)
-
 
 PROGRESS SO FAR:
 
@@ -277,9 +237,6 @@ Solving this through our data, we get => 1613/18036*100 = 8.94%
 ![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/afd10f2b-4199-44ed-9a1b-6d56fe71cb7c)
 
 After this, one may look at the results of the synthesis through hte **picorv32a.synthesis.v** file, which can be found as shown, and then viewed through the _less_ command.
-
-{IMAGE CREDITS: AUTHOR ; screenshot taken from device}  
-![image](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/assets/163879237/4c82387b-9c37-4187-b689-0ec19812aaf4)
 
 Also, to look at the clock timing report, we can go into **reports** folder by _cd_ command, and then view the report named **1-yosys_4.stat.rpt**, or the STA report named **2-opensta.timing.rpt** through the _less_ command, which can be exited by pressing the _Q_ key.
 
