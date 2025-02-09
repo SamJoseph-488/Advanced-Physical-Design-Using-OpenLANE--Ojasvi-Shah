@@ -1,8 +1,8 @@
-# Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah
+# Advanced-Physical-Design-Using-OpenLANE--P S Sam Joseph
 
 Course -  [Advanced Physical Design Using OpenLANE/SKY130 offered by VSDIAT](https://vsdsquadron.vlsisystemdesign.com/digital-vlsi-soc-design-and-planning/)
 
-Author - Ojasvi Shah
+Author - P S Sam Joseph
 
 Contents -:
 * [SKY130 Day 1: Inception of OpenSource EDA, OpenLANE and SKY130 PDK](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/blob/main/DAY%201.md)
@@ -107,4 +107,3 @@ Contents -:
         + [TritonRoute Feature 2 & 3 - Inter-Guide Connectivity and Intra & Inter Layer Routing](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/blob/main/DAY%205.md#tritonroute-feature-2--3---inter-guide-connectivity-and-intra--inter-layer-routing)
         + [TritonRoute Method To Handle Connectivity](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/blob/main/DAY%205.md#tritonroute-method-to-handle-connectivity)
         + [Routing Topology Algorithm and Final Files List Post Route](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/blob/main/DAY%205.md#routing-topology-algorithm-and-final-files-list-post-route)
-* [Bibliography and Acknowledgements](https://github.com/ojasvi-shah/Advanced-Physical-Design-Using-OpenLANE--Ojasvi-Shah/blob/main/Bibliography%20and%20Acknowledgements.md)
